@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="SlidePacerWPF.Pages.Settings.Timings"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Style="{StaticResource ContentRoot}">
+        <ScrollViewer>
+            <StackPanel MinWidth="200">
+                <TextBlock Text="TIMINGS" Style="{StaticResource Heading2}" />
+                
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Text="Time to look:" Height="20" />
+                    <Slider Name="sliderTimeToLook" Margin="10,0,0,0" TickPlacement="Both" Value="2" ToolTip="Time allowed deaf students to shift gaze to slideshow" AutoToolTipPlacement="TopLeft" Width="200" SmallChange="0.5" ValueChanged="sliderTimeToLook_ValueChanged"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <TextBlock Text="Time to view:" Height="20" />
+                    <Slider Name="sliderTimeToView" Margin="10,0,0,0" TickPlacement="Both" Value="3" ToolTip="Time allowed deaf students to view current slide" AutoToolTipPlacement="TopLeft" Width="200" SmallChange="0.5" ValueChanged="sliderTimeToView_ValueChanged"/>
+                </StackPanel>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
